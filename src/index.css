@@ -94,6 +94,10 @@ input{
     transition: opacity .4s cubic-bezier(.694,0,.335,1),transform .4s cubic-bezier(.694,0,.335,1),visibility .3s cubic-bezier(.694,0,.335,1) 0ms;
 }
 
+.episode-list{
+  list-style: none;
+}
+
 @media (min-width: 1024px){
   .header .header-content{
     justify-content: flex-start;

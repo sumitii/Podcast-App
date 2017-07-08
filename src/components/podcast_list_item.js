@@ -21,7 +21,7 @@ class PodcastListItem extends Component {
 
 	render() {
 		return (
-			<div display="none">
+			<div>
 				{this.state.episodes.map((episode, index) => {
 					return (
 						<p key={index}>{episode}</p>
