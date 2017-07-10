@@ -5,7 +5,15 @@ import _ from "lodash";
 class PodcastListItem extends Component {
 	state = {
 		episodes: [],
+		isHidden: true,
 	};
+
+	toggleHidden (){
+		this.setState({
+			isHidden: !this.state.isHidden
+			
+		})
+	}
 
 	componentDidMount() {
 		RSSParser.parseURL(this.props.feed, (err, parsed) => {
@@ -19,14 +27,18 @@ class PodcastListItem extends Component {
 		});
 	}
 
+
 	render() {
 		return (
 			<div>
-				{this.state.episodes.map((episode, index) => {
-					return (
-						<p key={index}>{episode}</p>
-					);
-				})}
+			<a className="episode-list-btn waves-effect waves-light btn indigo" href="#" onClick={this.toggleHidden.bind(this)}>Episodes</a>
+				{!this.state.isHidden && <div>
+					{this.state.episodes.map((episode, index) => {
+						return (
+							<p key={index}>{episode}</p>
+						);
+					})}
+				</div> }
 			</div>
 		);
 

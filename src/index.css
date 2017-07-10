@@ -2,7 +2,6 @@ body {
     font-weight: 300;
     letter-spacing: normal;
     text-transform: none;
-    font-family: Gotham SSm,sans-serif;
     font-size: 13px;
     line-height: 2em;
     color: #222;
@@ -78,24 +77,21 @@ input{
 
 .input:focus{
   outline: none;
+  border-bottom: 1px solid #283593 !important;
+  box-shadow: 0 1px 0 0 #283593 !important;
 }
 
-.magnifying-glass{
-  opacity: .7;
-    position: absolute;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    margin: auto;
-    left: auto;
-    width: 20px;
-    height: 20px;
-    transition: opacity .4s cubic-bezier(.694,0,.335,1),transform .4s cubic-bezier(.694,0,.335,1),visibility .3s cubic-bezier(.694,0,.335,1) 0ms;
+.podcast-image{
+  margin-right: 25px;
 }
 
 .episode-list{
   list-style: none;
+}
+
+.episode-list-btn{
+  margin-top: 15px;
+  margin-bottom: 15px;
 }
 
 @media (min-width: 1024px){
